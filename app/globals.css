@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #0d1016;
+  --bg-raised: #12161e;
+  --bg-panel: #161b24;
+  --line: #262d3a;
+  --line-soft: #1c222c;
+  --ink: #e4e7ec;
+  --ink-dim: #8b94a5;
+  --ink-faint: #5a6273;
+  --amber: #ffb100;
+  --amber-dim: #b8860b;
+  --amber-glow: rgba(255, 177, 0, 0.14);
+  --crit: #ff5c5c;
+  --high: #ff9a3d;
+  --med: #ffd23d;
+  --low: #6bd0ff;
+  --ok: #4ade80;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-body: 'IBM Plex Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(255, 177, 0, 0.06), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(107, 208, 255, 0.04), transparent 35%);
+}
+
+::selection {
+  background: var(--amber);
+  color: #0d1016;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* subtle scanline texture on panels */
+.grain {
+  position: relative;
+}
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.012) 0px,
+    rgba(255, 255, 255, 0.012) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  border-radius: inherit;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* focus visibility */
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-faint);
+}
