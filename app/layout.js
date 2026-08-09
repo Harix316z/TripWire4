@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Recon Console — Security Utility Toolkit",
+  title: "TripWire4 — Security Utility Toolkit",
   description:
     "Four self-hosted security utilities: hash identification, HTTP header auditing, secret scanning, and dependency vulnerability lookup.",
 };
