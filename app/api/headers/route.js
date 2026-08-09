@@ -93,7 +93,7 @@ export async function POST(req) {
       method: "GET",
       redirect: "follow",
       signal: controller.signal,
-      headers: { "User-Agent": "recon-console-header-scanner/1.0" },
+      headers: { "User-Agent": "TripWire4-header-scanner/1.0" },
     });
   } catch (err) {
     clearTimeout(timeout);
