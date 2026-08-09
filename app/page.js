@@ -51,7 +51,7 @@ export default function Home() {
             }}
           />
           <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "17px", letterSpacing: "-0.01em" }}>
-            RECON CONSOLE
+            TripWire4
           </span>
         </div>
         <span className="mono" style={{ fontSize: "11px", color: "var(--ink-faint)" }}>
